@@ -1,0 +1,30 @@
+[workspace]
+resolver = "3"
+members = ["crates/rk-win", "crates/rk-core", "crates/rk-mux", "crates/rk-app"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Min0ss/rekorder"
+publish = false
+
+[workspace.lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+missing_debug_implementations = "warn"
+
+[workspace.lints.clippy]
+undocumented_unsafe_blocks = "deny"
+multiple_unsafe_ops_per_block = "deny"
+unwrap_used = "warn"
+expect_used = "warn"
+panic = "warn"
+dbg_macro = "deny"
+todo = "warn"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+panic = "abort"
+strip = "symbols"

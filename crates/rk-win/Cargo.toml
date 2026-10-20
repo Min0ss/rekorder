@@ -1,0 +1,13 @@
+[package]
+name = "rk-win"
+description = "Windows bindings (COM, D3D11, Media Foundation, WGC). Only crate allowed to contain unsafe."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
